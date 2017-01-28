@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentContainer"
+    android:background="#607D8B"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:padding="16dp" >
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentLeft="true">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:padding="16dp"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"  >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:id="@+id/boardingTime"
+                        tools:text="Boarding Place:" />
+                    <TextView
+                        android:text="Dadar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/placeName"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:textSize="34sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorPrimary"
+                        android:gravity="center"
+                        android:id="@+id/boardingPlace"
+                        tools:text="Boarding Time:" />
+
+                    <TextView
+                        android:text="11.00am"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/timeFrame"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:textSize="34sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="12dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/yetToReach"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="YET TO REACH DESTINATION"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_gravity="center"
+                    android:textSize="24sp"/>
+            </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/reachuiview"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:id="@+id/destination"
+                        tools:text="Destination Place:" />
+                    <TextView
+                        android:text="Dadar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/place2Name"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:textSize="34sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:id="@+id/arrivalTime"
+                            tools:text="Arrival Time:" />
+
+                        <TextView
+                            android:text="11.00am"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/time2Frame"
+                            android:gravity="center"
+                            android:textColor="#000000"
+                            android:textSize="34sp" />
+                    </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/train"
+        android:id="@+id/imageView2"
+        android:layout_above="@+id/layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
